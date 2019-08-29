@@ -5,12 +5,6 @@ Array.prototype.forEach.call(buttons, function (b) {
 })
 
 function createRipple (e) {
-    var existingCircle = $('.ripple');
-
-    if (existingCircle.length > 0) {
-        $('.ripple').remove();
-    }
-
     var circle = document.createElement('div');
     this.appendChild(circle);
 
@@ -22,6 +16,5 @@ function createRipple (e) {
     
     circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
 
-    circle.classList.add('ripple');
-    
+    circle.classList.add('ripple');    
 }
