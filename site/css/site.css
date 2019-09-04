@@ -139,8 +139,10 @@ main {
 
 .navButton .ripple {
     border-radius: 50%;
-    background-color: rgba(29, 52, 204, 0.7);
     position: absolute;
+    
+    background-color: rgba(29, 52, 204, 0.7);
+    
     transform: scale(0);
     animation: ripple 0.6s linear;
 }
@@ -158,7 +160,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     
     /* background-color: #2340f4; */
     background-color: #03A9F4;
@@ -172,6 +173,7 @@ main {
     align-items: center;
     width: 100%;
     border-top: 1px solid black;
+    
     background-color: rgb(255, 255, 255);
 }
 
@@ -180,6 +182,7 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: 80% 10% 10%;
+    
     border-bottom: 1px solid black;
 }
 
@@ -207,15 +210,17 @@ main {
 
 .ourEstate {
     min-height: 62vh;
-    background-color: #03A9F4;
     display: grid;
-    grid-template-rows: 8vh 30vh auto;
+    grid-template-rows: 12vh 30vh 20vh;
+
+    background-color: #03A9F4;
 }
 
 .ourEstate h1 {
     display: grid;
     justify-self: center;
     align-self: center;
+    
     color: white;
     text-shadow: 1px 1px 1px black;
 }
@@ -224,25 +229,33 @@ main {
     display: grid;
     justify-self: center;
     align-self: center;
-    height: 90%;
+    /* height: 90%; */
+    width: 90%;
+
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-.ourEstate p {
+.ourEstate .text {
     display: grid;
     justify-self: center;
-    height: 90%;
-    width: 100%;
+    width: 90%;
+    margin-top: 10px;
     padding-top: 20px;
+
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
+}
+
+.ourEstate .text p {
     color: white;
     text-align: center;
-    background-color: rgba(0,0,0,0.2);
+    font-size: 18px;
 }
 
 footer {
     bottom: 0;
     height: 40vh;
     width: 100%;
+
     background-color: #04178F;
 }
