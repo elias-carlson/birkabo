@@ -1,0 +1,243 @@
+@color_1           : black;
+@color_2           : white;
+@color_3           : rgba(9, 41, 246, 0.5);
+@font_family_1     : 'Roboto', sans-serif;
+@font_family_2     : 'Roboto Slab', serif;
+@background_color_1: rgba(0, 0, 0, 0.4);
+@background_color_2: #2340f4;
+@background_color_3: rgba(29, 52, 204, 0.7);
+@background_color_4: rgb(255, 255, 255);
+@background_color_5: #03A9F4;
+@background_color_6: rgba(0, 0, 0, 0.2);
+@background_color_7: #04178F;
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity  : 0;
+    }
+}
+
+* {
+    margin     : 0;
+    padding    : 0;
+    font-family: @font_family_1;
+}
+
+h1 {
+    font-size  : 32px;
+    font-family: @font_family_2;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+a {
+    color          : @color_1;
+    text-decoration: none;
+}
+
+header {
+    height               : 10vh;
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: auto auto 20%;
+    box-shadow           : 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index              : 10;
+    position             : relative;
+}
+
+#logo {
+    display    : grid;
+    align-self : center;
+    margin-left: 10px;
+    grid-column: 1 / span 1;
+    height     : 40%;
+    background : url("../img/birkabo_logo.svg") center no-repeat;
+}
+
+#sideMenuButton {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+    grid-column    : 3 / span 1;
+
+    .material-icons {
+        font-size: 28px;
+    }
+}
+
+.welcome {
+    min-height     : 45vh;
+    padding        : 0 10px 0 10px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    background     : url("../img/VR/20190521-IMG_9096-Redigera.jpg") center no-repeat;
+    background-size: cover;
+    position       : relative;
+    color          : @color_2;
+}
+
+.overlay {
+    position: relative;
+
+    &::before {
+        position        : absolute;
+        width           : 100%;
+        height          : 100%;
+        content         : " ";
+        top             : 0;
+        left            : 0;
+        z-index         : 0;
+        background-color: @background_color_1;
+        display         : block;
+    }
+}
+
+.title {
+    h1 {
+        text-align: center;
+        z-index   : 10;
+    }
+
+    p {
+        width     : 90%;
+        margin    : 20px;
+        text-align: center;
+        z-index   : 10;
+    }
+}
+
+main {
+    display: grid;
+}
+
+.navButtons {
+    min-height        : 50vh;
+    padding           : 40px 0 40px 0;
+    display           : grid;
+    grid-template-rows: repeat(5, 75px);
+    grid-row-gap      : 20px;
+    justify-items     : center;
+}
+
+.navButton {
+    width           : 80%;
+    height          : 100%;
+    background-color: @background_color_2;
+    box-shadow      : 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-left     : solid 8px #00F764;
+    border-radius   : 2px;
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    font-size       : 18px;
+    font-weight     : 700;
+    color           : @color_2;
+    text-shadow     : 1px 1px 1px black;
+    text-transform  : uppercase;
+    overflow        : hidden;
+    position        : relative;
+
+    .material-icons {
+        margin: 0 10px 0 10px;
+    }
+
+    .ripple {
+        border-radius   : 50%;
+        position        : absolute;
+        background-color: @background_color_3;
+        transform       : scale(0);
+        animation       : ripple 0.6s linear;
+    }
+}
+
+.ourEstatesMenu {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    width           : 100%;
+    background-color: @background_color_4;
+}
+
+.ourEstatesMenuItem {
+    height               : 3em;
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: 80% 10% 10%;
+
+    h3 {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        padding-left   : 10px;
+    }
+
+    .material-icons {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        grid-column    : 3;
+    }
+}
+
+.ourEstatesMenuItem.selected {
+    color: @color_3;
+}
+
+.ourEstate {
+    min-height        : 62vh;
+    display           : grid;
+    grid-template-rows: 12vh 30vh 20vh;
+    background-color  : @background_color_5;
+
+    h1 {
+        display     : grid;
+        justify-self: center;
+        align-self  : center;
+        color       : @color_2;
+        text-shadow : 1px 1px 1px black;
+    }
+
+    img {
+        display     : grid;
+        justify-self: center;
+        align-self  : center;
+        height      : 90%;
+        box-shadow  : 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .text {
+        display         : grid;
+        justify-self    : center;
+        margin-top      : 10px;
+        padding         : 20px 0 0 20px;
+        box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.5);
+        background-color: @background_color_6;
+        color           : @color_2;
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+footer {
+    bottom          : 0;
+    height          : 40vh;
+    width           : 100%;
+    background-color: @background_color_7;
+}
