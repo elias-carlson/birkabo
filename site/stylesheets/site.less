@@ -1,53 +1,53 @@
-@color_1           : black;
-@color_2           : white;
-@color_3           : rgba(9, 41, 246, 0.5);
-@font_family_1     : 'Roboto', sans-serif;
-@font_family_2     : 'Roboto Slab', serif;
-@background_color_1: rgba(0, 0, 0, 0.4);
-@background_color_2: #2340f4;
-@background_color_3: rgba(29, 52, 204, 0.7);
-@background_color_4: rgb(255, 255, 255);
-@background_color_5: #03A9F4;
-@background_color_6: rgba(0, 0, 0, 0.2);
-@background_color_7: #04178F;
+@fontFamily1 : 'Roboto',
+sans-serif;
+@fontFamily2 : 'Roboto Slab',
+serif;
 
-@keyframes ripple {
-    to {
-        transform: scale(2.5);
-        opacity  : 0;
-    }
-}
+@textColor : white;
+
+@mainColor : rgba(3, 169, 244, 1);
+@color2    : rgba(0, 100, 148, 1);
+@color3    : rgba(36, 123, 160, 1);
+@color4    : rgba(20, 92, 158, 1);
+@color5    : rgba(19, 41, 61, 1);
+
+@linkColor  : black;
+@rippleColor: rgba(23, 51, 231, 0.7);
+
+@shadowColor1 : rgba(0, 0, 0, 0.4);
+@shadowColor2 : rgba(0, 0, 0, 0.2);
 
 * {
-    margin     : 0;
-    padding    : 0;
-    font-family: @font_family_1;
+    margin : 0;
+    padding: 0;
+}
+
+html {
+    font-size  : 100%;
+    color      : @color5;
+    font-family: @fontFamily1;
 }
 
 h1 {
-    font-size  : 32px;
-    font-family: @font_family_2;
+    font-size  : 2rem;
+    font-family: @fontFamily2;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 1.4rem;
 }
 
 h3 {
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 a {
-    color          : @color_1;
+    color          : @linkColor;
     text-decoration: none;
 }
 
 header {
-    height               : 10vh;
+    height               : 5rem;
     width                : 100%;
     display              : grid;
     grid-template-columns: auto auto 20%;
@@ -56,13 +56,13 @@ header {
     position             : relative;
 }
 
-#logo {
+.logo {
     display    : grid;
     align-self : center;
-    margin-left: 10px;
     grid-column: 1 / span 1;
-    height     : 40%;
-    background : url("../img/birkabo_logo.svg") center no-repeat;
+    height     : 2rem;
+    margin-left: 0.5rem;
+    background : url("../img/birkabo_logo.svg") no-repeat;
 }
 
 #sideMenuButton {
@@ -73,13 +73,13 @@ header {
     grid-column    : 3 / span 1;
 
     .material-icons {
-        font-size: 28px;
+        font-size: 1.4rem;
     }
 }
 
 .welcome {
     min-height     : 45vh;
-    padding        : 0 10px 0 10px;
+    padding        : 0 0.5rem 0 0.5rem;
     display        : flex;
     flex-direction : column;
     align-items    : center;
@@ -87,7 +87,7 @@ header {
     background     : url("../img/VR/20190521-IMG_9096-Redigera.jpg") center no-repeat;
     background-size: cover;
     position       : relative;
-    color          : @color_2;
+    color          : @textColor;
 }
 
 .overlay {
@@ -101,7 +101,7 @@ header {
         top             : 0;
         left            : 0;
         z-index         : 0;
-        background-color: @background_color_1;
+        background-color: @shadowColor1;
         display         : block;
     }
 }
@@ -114,53 +114,58 @@ header {
 
     p {
         width     : 90%;
-        margin    : 20px;
+        margin    : 1.2rem;
         text-align: center;
         z-index   : 10;
     }
 }
 
 main {
-    display: grid;
+    background-color: @mainColor;
 }
 
 .navButtons {
-    min-height        : 50vh;
-    padding           : 40px 0 40px 0;
+    padding           : 1.3em 0 1.3em 0;
     display           : grid;
-    grid-template-rows: repeat(5, 75px);
-    grid-row-gap      : 20px;
+    grid-template-rows: repeat(5, 5em);
+    grid-row-gap      : 1.3em;
     justify-items     : center;
 }
 
 .navButton {
-    width           : 80%;
-    height          : 100%;
-    background-color: @background_color_2;
+    width           : 85%;
+    background-color: @color4;
     box-shadow      : 0 5px 10px rgba(0, 0, 0, 0.5);
     border-left     : solid 8px #00F764;
     border-radius   : 2px;
     display         : flex;
     flex-direction  : row;
     align-items     : center;
-    font-size       : 18px;
+    font-size       : 1.1rem;
     font-weight     : 700;
-    color           : @color_2;
+    color           : @textColor;
     text-shadow     : 1px 1px 1px black;
     text-transform  : uppercase;
     overflow        : hidden;
     position        : relative;
 
     .material-icons {
-        margin: 0 10px 0 10px;
+        margin: 0 0.5rem 0 0.5rem;
     }
 
     .ripple {
         border-radius   : 50%;
         position        : absolute;
-        background-color: @background_color_3;
+        background-color: @rippleColor;
         transform       : scale(0);
         animation       : ripple 0.6s linear;
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(2.5);
+            opacity  : 0;
+        }
     }
 }
 
@@ -169,11 +174,12 @@ main {
     flex-direction  : column;
     align-items     : center;
     width           : 100%;
-    background-color: @background_color_4;
+    background-color: white;
+    height          : 8rem;
 }
 
 .ourEstatesMenuItem {
-    height               : 3em;
+    height               : 33%;
     width                : 100%;
     display              : grid;
     grid-template-columns: 80% 10% 10%;
@@ -182,7 +188,7 @@ main {
         display        : flex;
         flex-direction : column;
         justify-content: center;
-        padding-left   : 10px;
+        padding-left   : 0.5rem;
     }
 
     .material-icons {
@@ -195,49 +201,50 @@ main {
 }
 
 .ourEstatesMenuItem.selected {
-    color: @color_3;
+    color: @color4;
 }
 
-.ourEstate {
-    min-height        : 62vh;
+.currentEstate {
     display           : grid;
-    grid-template-rows: 12vh 30vh 20vh;
-    background-color  : @background_color_5;
+    min-height        : 40rem;
 
     h1 {
         display     : grid;
         justify-self: center;
         align-self  : center;
-        color       : @color_2;
+        color       : @textColor;
         text-shadow : 1px 1px 1px black;
+        margin      : ;
     }
 
     img {
         display     : grid;
         justify-self: center;
         align-self  : center;
-        height      : 90%;
+        width: 90%;
         box-shadow  : 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     .text {
-        display         : grid;
-        justify-self    : center;
-        margin-top      : 10px;
-        padding         : 20px 0 0 20px;
-        box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.5);
-        background-color: @background_color_6;
-        color           : @color_2;
+        width: 90%;
+        justify-self: center;
+
+        h3 {
+            color      : @textColor;
+            text-shadow: 1px 1px 1px black;
+        }
 
         p {
-            font-size: 16px;
+            font-size : 0.8rem;
+            margin-top: 1rem;
+            text-align: justify;
         }
     }
 }
 
 footer {
     bottom          : 0;
-    height          : 40vh;
+    height          : 20rem;
     width           : 100%;
-    background-color: @background_color_7;
+    background-color: @color5;
 }
