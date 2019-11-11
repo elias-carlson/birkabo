@@ -1,258 +1,194 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
+html {
+  font-size: 100%;
+  color: #13293d;
+  font-family: 'Roboto', sans-serif;
+}
 h1 {
-    font-size: 32px;
-    font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  font-family: 'Roboto Slab', serif;
 }
-
 h2 {
-    font-size: 28px;
+  font-size: 1.4rem;
 }
-
 h3 {
-    font-size: 24px;
+  font-size: 1.1rem;
 }
-
-h4 {
-    font-size: 20px;
-}
-
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
-
 header {
-    height: 10vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto 20%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    /* background-color: #03a9f4; */
-
-    z-index: 10;
-    position: relative;
+  height: 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto 20%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: relative;
 }
-
-#logo {
-    display: grid;
-    align-self: center;
-    margin-left: 10px;
-    grid-column: 1 / span 1;
-    height: 40%;
-
-
-    background: url("../img/birkabo_logo.svg") center no-repeat;
-    /* background-size: auto 35%; */
+.logo {
+  display: grid;
+  align-self: center;
+  grid-column: 1 / span 1;
+  height: 2rem;
+  margin-left: 0.8rem;
+  background: url("../img/birkabo_logo.svg") no-repeat;
 }
-
 #sideMenuButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / span 1;
 }
-
 #sideMenuButton .material-icons {
-    font-size: 28px;
+  font-size: 1.4rem;
 }
-
 .welcome {
-    min-height: 45vh;
-    padding: 0 10px 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url("../img/VR/20190521-IMG_9096-Redigera.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-    color: white;
+  min-height: 45vh;
+  padding: 0 0.5rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/VR/ViktorRydbergsgatanMain.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
 }
-
 .overlay {
-    position: relative;
+  position: relative;
 }
-
 .overlay::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content:" ";
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: rgba(0,0,0,0.4);
-    display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
 }
-
 .title h1 {
-    text-align: center;
-    z-index: 10;
+  text-align: center;
+  z-index: 10;
 }
-
 .title p {
-    width: 90%;
-    margin: 20px;
-    text-align: center;
-    z-index: 10;
+  width: 90%;
+  margin: 1.2rem;
+  text-align: center;
+  z-index: 10;
 }
-
 main {
-    /* background-color: #03A9F4; */
-    display: grid;
-    /* grid-template-rows: 40vh 50vh; */
+  background-color: #03a9f4;
 }
-
 .navButtons {
-    min-height: 50vh;
-    padding: 40px 0 40px 0;
-    display: grid;
-    grid-template-rows: repeat(5, 75px);
-    grid-row-gap: 20px;
-    justify-items: center;
+  padding: 1.3em 0 1.3em 0;
+  display: grid;
+  grid-template-rows: repeat(5, 5em);
+  grid-row-gap: 1.3em;
+  justify-items: center;
 }
-
 .navButton {
-    width: 80%;
-    height: 100%;
-    background-color: #2340f4;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-    border-left: solid 8px #00F764;
-    border-radius: 2px;
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-transform: uppercase;    
-
-    overflow: hidden;
-    position: relative;
+  width: 85%;
+  background-color: #145c9e;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-left: solid 8px #00F764;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
 }
-
 .navButton .material-icons {
-    margin: 0 10px 0 10px;
+  margin: 0 0.5rem 0 0.5rem;
 }
-
 .navButton .ripple {
-    border-radius: 50%;
-    position: absolute;
-    
-    background-color: rgba(29, 52, 204, 0.7);
-    
-    transform: scale(0);
-    animation: ripple 0.6s linear;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #0e3964;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
 }
-
 @keyframes ripple {
-    to {
-        transform: scale(2.5);
-        opacity: 0;
-    }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
-
 .ourEstatesMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* border-top: 1px solid black; */
-
-    background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 8rem;
 }
-
 .ourEstatesMenuItem {
-    height: 3em;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 80% 10% 10%;
-
-    /* border-bottom: 1px solid black; */
+  height: 33%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
 }
-
-.ourEstatesMenuItem.selected {
-    /* background-color: rgb(201, 201, 201); */
-    /* color: black; */
-    color: rgba(9, 41, 246, 0.5);
-    /* text-shadow: 1px 1px 1px black; */
-}
-
 .ourEstatesMenuItem h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.5rem;
 }
-
 .ourEstatesMenuItem .material-icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3;
 }
-
-.ourEstate {
-    min-height: 62vh;
-    display: grid;
-    grid-template-rows: 12vh 30vh 20vh;
-
-    background-color: #03A9F4;
+.ourEstatesMenuItem.selected {
+  color: #03a9f4;
 }
-
-.ourEstate h1 {
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    
-    color: white;
-    text-shadow: 1px 1px 1px black;
+.estates .hidden {
+  display: none;
 }
-
-.ourEstate img {
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    height: 90%;
-    /* width: 90%; */
-
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+.estates .selected {
+  min-height: 40rem;
 }
-
-.ourEstate .text {
-    display: grid;
-    justify-self: center;
-    margin-top: 10px;
-    padding: 20px 0 0 20px;
-
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    background-color: rgba(0,0,0,0.2);
-    
-    color: white;
+.estates .selected h1 {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin: 1rem 0 1rem 0;
 }
-
-.ourEstate .text h4 {
+.estates .selected .text {
+  width: 90%;
+  justify-self: center;
 }
-
-.ourEstate .text p {
-    font-size: 16px;
-    /* width: 90%; */
+.estates .selected .text h3 {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin: 1rem 0 1rem 0;
 }
-
+.estates .selected .text p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
 footer {
-    bottom: 0;
-    height: 40vh;
-    width: 100%;
-
-    background-color: #04178F;
+  bottom: 0;
+  height: 20rem;
+  width: 100%;
+  background-color: #13293d;
 }
