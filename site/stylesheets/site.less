@@ -12,7 +12,7 @@ serif;
 @color5    : rgba(19, 41, 61, 1);
 
 @linkColor  : black;
-@rippleColor: rgba(23, 51, 231, 0.7);
+@rippleColor: rgb(14, 57, 100);
 
 @shadowColor1 : rgba(0, 0, 0, 0.4);
 @shadowColor2 : rgba(0, 0, 0, 0.2);
@@ -29,7 +29,7 @@ html {
 }
 
 h1 {
-    font-size  : 2rem;
+    font-size  : 1.8rem;
     font-family: @fontFamily2;
 }
 
@@ -61,7 +61,7 @@ header {
     align-self : center;
     grid-column: 1 / span 1;
     height     : 2rem;
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
     background : url("../img/birkabo_logo.svg") no-repeat;
 }
 
@@ -84,7 +84,7 @@ header {
     flex-direction : column;
     align-items    : center;
     justify-content: center;
-    background     : url("../img/VR/20190521-IMG_9096-Redigera.jpg") center no-repeat;
+    background     : url("../img/VR/ViktorRydbergsgatanMain.jpg") center no-repeat;
     background-size: cover;
     position       : relative;
     color          : @textColor;
@@ -201,12 +201,16 @@ main {
 }
 
 .ourEstatesMenuItem.selected {
-    color: @color4;
+    color: @mainColor;
 }
 
-.currentEstate {
-    display           : grid;
-    min-height        : 40rem;
+.estates .hidden {
+    display: none;
+}
+
+.estates .selected {
+    display   : grid;
+    min-height: 40rem;
 
     h1 {
         display     : grid;
@@ -214,30 +218,32 @@ main {
         align-self  : center;
         color       : @textColor;
         text-shadow : 1px 1px 1px black;
-        margin      : ;
+        margin      : 1rem 0 1rem 0;
     }
 
     img {
         display     : grid;
         justify-self: center;
         align-self  : center;
-        width: 90%;
+        width       : 90%;
         box-shadow  : 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     .text {
-        width: 90%;
+        width       : 90%;
         justify-self: center;
 
         h3 {
             color      : @textColor;
             text-shadow: 1px 1px 1px black;
+            margin     : 1rem 0 1rem 0;
         }
 
         p {
-            font-size : 0.8rem;
-            margin-top: 1rem;
-            text-align: justify;
+            font-size    : 0.8rem;
+            font-weight  : bold;
+            margin-bottom: 1rem;
+            text-align   : justify;
         }
     }
 }
