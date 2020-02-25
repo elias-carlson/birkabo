@@ -5,17 +5,20 @@ serif;
 
 @textColor : white;
 
-@mainColor : rgba(3, 169, 244, 1);
-@color2    : rgba(0, 100, 148, 1);
-@color3    : rgba(36, 123, 160, 1);
-@color4    : rgba(20, 92, 158, 1);
-@color5    : rgba(19, 41, 61, 1);
+// @primaryColor : rgba(3, 169, 244, 1);
+// @color2       : rgba(0, 100, 148, 1);
+// @color3       : rgba(36, 123, 160, 1);
+// @color4       : rgba(20, 92, 158, 1);
+// @accentColor       : rgba(19, 41, 61, 1);
+
+@primaryColor: rgb(142, 210, 229);
+@color2      : rgb(19, 51, 68);
+@color3      : rgb(42, 154, 224);
+@bgColor     : rgb(227, 231, 211);
+@accentColor     : rgb(229, 34, 44);
 
 @linkColor  : black;
 @rippleColor: rgb(14, 57, 100);
-
-@shadowColor1 : rgba(0, 0, 0, 0.4);
-@shadowColor2 : rgba(0, 0, 0, 0.2);
 
 * {
     margin : 0;
@@ -24,7 +27,7 @@ serif;
 
 html {
     font-size  : 100%;
-    color      : @color5;
+    color      : @accentColor;
     font-family: @fontFamily1;
 }
 
@@ -47,15 +50,14 @@ a {
 }
 
 header {
-    height                  : 5rem;
-    width                   : 100%;
-    display                 : grid;
-    grid-template-columns   : auto auto 20%;
-    box-shadow              : 0 2px 5px rgba(0, 0, 0, 0.5);
-    z-index                 : 10;
-    position                : relative;
-    background-color        : white;
-    // background-color     : rgb(240, 240, 240);
+    height               : 5rem;
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: auto auto 20%;
+    box-shadow           : 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index              : 10;
+    position             : relative;
+    background-color     : @bgColor;
 }
 
 .logo {
@@ -80,15 +82,18 @@ header {
 }
 
 main {
-    // background-color   : @mainColor;
+    background-color      : @bgColor;
     // background-color   : rgb(243, 243, 243);
-    background-color      : white;
 }
 
 footer {
-    color      : @textColor;
-    text-align : center;
-    padding-top: 2rem;
+    color           : @textColor;
+    text-align      : center;
+    padding-top     : 2rem;
+    background-color: @color2;
+    bottom          : 0;
+    height          : 20rem;
+    width           : 100%;
 }
 
 
@@ -129,7 +134,7 @@ footer {
 }
 
 .welcomeText {
-    color      : @color4;
+    color      : @bgColor;
     text-align : center;
     width      : 100%;
     text-shadow: 1px 1px 1px black;
@@ -147,7 +152,7 @@ footer {
         top             : 0;
         left            : 0;
         z-index         : 0;
-        background-color: @shadowColor1;
+        background-color: rgba(0, 0, 0, 0.4);
         display         : block;
     }
 }
@@ -176,9 +181,9 @@ footer {
 
 .navButton {
     width           : 85%;
-    background-color: @mainColor;
+    background-color: @color3;
     box-shadow      : 2px 2px 10px rgba(0, 0, 0, 0.25);
-    border-left     : solid 8px #00F764;
+    border-left     : solid 8px @accentColor;
     border-radius   : 5px;
     display         : flex;
     flex-direction  : row;
@@ -267,7 +272,7 @@ footer {
 }
 
 .ourEstatesMenuItem.selected {
-    color: @mainColor;
+    color: @primaryColor;
 }
 
 .estates .hidden {
@@ -314,11 +319,4 @@ footer {
             padding    : 0.8rem;
         }
     }
-}
-
-footer {
-    bottom          : 0;
-    height          : 20rem;
-    width           : 100%;
-    background-color: @color5;
 }

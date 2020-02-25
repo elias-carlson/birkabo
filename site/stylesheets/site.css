@@ -4,7 +4,7 @@
 }
 html {
   font-size: 100%;
-  color: #13293d;
+  color: #e5222c;
   font-family: 'Roboto', sans-serif;
 }
 h1 {
@@ -29,7 +29,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 10;
   position: relative;
-  background-color: white;
+  background-color: #e3e7d3;
 }
 .logo {
   display: grid;
@@ -50,12 +50,16 @@ header {
   font-size: 1.4rem;
 }
 main {
-  background-color: white;
+  background-color: #e3e7d3;
 }
 footer {
   color: white;
   text-align: center;
   padding-top: 2rem;
+  background-color: #133344;
+  bottom: 0;
+  height: 20rem;
+  width: 100%;
 }
 .welcomeImg {
   min-height: 30vh;
@@ -70,7 +74,7 @@ footer {
   color: white;
 }
 .welcomeText {
-  color: #145c9e;
+  color: #e3e7d3;
   text-align: center;
   width: 100%;
   text-shadow: 1px 1px 1px black;
@@ -109,9 +113,9 @@ footer {
 }
 .navButton {
   width: 85%;
-  background-color: #03a9f4;
+  background-color: #2a9ae0;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
-  border-left: solid 8px #00F764;
+  border-left: solid 8px #e5222c;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -168,7 +172,7 @@ footer {
   grid-column: 3;
 }
 .ourEstatesMenuItem.selected {
-  color: #03a9f4;
+  color: #8ed2e5;
 }
 .estates .hidden {
   display: none;
@@ -196,10 +200,4 @@ footer {
   text-align: justify;
   line-height: 1.2rem;
   padding: 0.8rem;
-}
-footer {
-  bottom: 0;
-  height: 20rem;
-  width: 100%;
-  background-color: #13293d;
 }
